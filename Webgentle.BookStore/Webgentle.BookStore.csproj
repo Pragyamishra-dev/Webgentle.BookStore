@@ -6,14 +6,6 @@
 
   <ItemGroup>
     <None Remove="Controllers\BookController.cs~RF1c14780c.TMP" />
-    <None Remove="MyStaticFiles\hitmlogo.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="MyStaticFiles\hitmlogo.png">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
