@@ -1,32 +1,40 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+<div class="jumbotron">
+  <div class="container">
+  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+  It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Search Book</a>
+  </div>
+</div> 
 
-
-
-    <link href="~/lib/twitter-bootstrap//css/bootstrap.css" rel="stylesheet"/>
-    <link href="~/css/Site.css" rel="stylesheet"/>
-</head>
-<body class="container">
-
-    <img src="~/images/hitmlogo.png" class="logo" alt="logo" />
-    <input type="button" value="Click me" class="btn btn-danger"/>
-     <h1 class="h1">Welcome to book store Application</h1>  
-   
-    <p>This is the page of our book store application </p>
-</body>
-</html>
-<script src="~/lib/jquery/jquery.js"></script>
-<script>
-    $(document).ready(function(){
-        //alert("Page Loaded successfully!!");
-    })
-</script>
+<div class="card-group">
+  <div class="card">
+    <img src="~/images/hitmlogo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="~/images/hitmlogo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="~/images/hitmlogo.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
