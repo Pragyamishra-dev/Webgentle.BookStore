@@ -43,6 +43,8 @@
   </div>
 </nav>
 
+@RenderSection("breadcrumb",required:false);
+
 
         </header>
  <main role="main">
@@ -54,5 +56,7 @@
        </div>
 
    </footer>
+   <script src="~/lib/jquery/jquery.js"></script>
+   @RenderSection("scripts",required:false);
 </body>
 </html>
