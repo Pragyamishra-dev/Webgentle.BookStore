@@ -23,13 +23,13 @@ namespace Webgentle.BookStore.Repository
         {
             return new List<BookModel>()
         {
-            new BookModel(){Id=1,Title="JAVA",Author="Priyanka"},
-            new BookModel(){Id=2,Title="Machine Learning",Author="Archana",Descrption="This is The Description For MVC Book"},
-            new BookModel(){Id=3,Title="Data Science",Author="Priya",Descrption="This is The Description For MVC Book"},
-            new BookModel(){Id=4,Title=".NET Core and C#",Author="Pragya",Descrption="This is The Description For MVC Book"},
-            new BookModel(){Id=5,Title="AI Engg.",Author="Aarya",Descrption="This is The Description For MVC Book"},
-            new BookModel(){Id=5,Title="AI with Machine Learning",Author="Aary",Descrption="This is The Description For MVC Book"},
-            new BookModel(){Id=5,Title="AI with Robotics",Author="Aaryan",Descrption="This is The Description For MVC Book"},
+            new BookModel(){Id=1,Title="JAVA",Author="Priyanka",Descrption="This is The Description For MVC Book",Category="Pragramming",Language="English",TotalPages=134},
+            new BookModel(){Id=2,Title="Machine Learning",Author="Archana",Descrption="This is The Description For MVC Book",Category="Framework",Language="Chinese",TotalPages=567},
+            new BookModel(){Id=3,Title="Data Science",Author="Priya",Descrption="This is The Description For MVC Book",Category="Pragramming",Language="English",TotalPages=100},
+            new BookModel(){Id=4,Title=".NET Core and C#",Author="Pragya",Descrption="This is The Description For MVC Book",Category="Concept",Language="English",TotalPages=800},
+            new BookModel(){Id=5,Title="AI Engg.",Author="Aarya",Descrption="This is The Description For MVC Book",Category="Pragramming",Language="English",TotalPages=100},
+            new BookModel(){Id=5,Title="AI with ML",Author="Aary",Descrption="This is The Description For MVC Book",Category="Pragramming",Language="English",TotalPages=100},
+            new BookModel(){Id=5,Title="AI with Robotics",Author="Aaryan",Descrption="This is The Description For MVC Book",Category="Pragramming",Language="English",TotalPages=100},
 
         };
     }
