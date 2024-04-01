@@ -1,20 +1,22 @@
-﻿
-@{
-    Layout = "_Layout";
+﻿@{
+    //dynamic data = ViewBag.Data;
+    var data = ViewBag.Data;
 }
-
-
-<div class="jumbotron">
+<section class="jumbotron text center">
   <div class="container">
-      <h1>Welcome To BookStore</h1>
-  <p class="lead text-muted">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      <h1>Welcome To BookStore @ViewBag.Title</h1>
+  <p class="lead text-muted">
+      @data.Id @data.Name<br/>
+      Id=@ViewBag.Type.Id <br/>
+      Name=@ViewBag.Type.Author
+      This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
   It uses utility classes for typography and spacing to space content out within the larger container.
   </p>
   <p>
   <a class="btn btn-primary btn-lg" href="#" role="button">Search Book</a>
 </p>  
 </div>
-</div> 
+</section> 
 
 <div class="py-5 bg-light">
     <div class="container">
