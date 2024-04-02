@@ -8,13 +8,15 @@ namespace Webgentle.BookStore.Controllers
     {
         public ViewResult Index()
         {
-            ViewBag.Title = "Pragya Mishra";
-            dynamic data = new ExpandoObject();
-            data.Id = 1;
-            data.Name = "Romi Mishra";
-            ViewBag.Data = data;
+            //ViewBag.Title = "Pragya Mishra";
+            //dynamic data = new ExpandoObject();
+            //data.Id = 1;
+            //data.Name = "Romi Mishra";
+            //ViewBag.Data = data;
             //ViewBag.Data = new { Id = 1, Name = "Pragya" };
-            ViewBag.Type = new BookModel() { Id = 5, Author = "Romi Mishra" };
+            //ViewBag.Type = new BookModel() { Id = 5, Author = "Romi Mishra" };
+            //ViewData["prperty1"] = "Pragya Mishra";
+            //ViewData["book"] = new BookModel() { Author = "Pragya", Id = 1 };
             return View();
         }
         public ViewResult AboutUs()
