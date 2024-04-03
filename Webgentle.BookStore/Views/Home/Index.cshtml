@@ -1,25 +1,15 @@
 ﻿@*@{
-    //dynamic data = ViewBag.Data;
-    var data = ViewBag.Data;
-}
-
-@{
-    var bookinfo = ViewData["book"] as BookModel;
+    ViewData["Title"] = "Home";
 }*@
 @{
-    ViewData["Title"] = "Home";
+    var book = ViewData["Book"] as BookModel;
 }
-
 <section class="jumbotron text center">
   <div class="container">
-      @*<h1>Welcome To BookStore @ViewBag.Title</h1>*@
-      <h1>Welcome To BookStore @ViewData["property1"]</h1>
+      <h1>Welcome To BookStore @ViewData["CustomProperty"]</h1>
+      <h1>Id=@book.Id</h1>
+      <h1>Title=@book.Title</h1>
   <p class="lead text-muted">
-@*      @data.Id @data.Name<br/>
-      Id=@ViewBag.Type.Id <br/>*@
-     @* Name=@ViewBag.Type.Author*@
-@*     <h1>Id=@bookinfo.Id</h1>
-     <h1>Author=@bookinfo.Author</h1>*@
       This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
   It uses utility classes for typography and spacing to space content out within the larger container.
   </p>

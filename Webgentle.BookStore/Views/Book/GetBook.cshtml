@@ -1,11 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Book Details " + Model.Title;
+    ViewData["Title"] = "Book Details " + Model.book.Title;
 }
-@model BookModel;
+@*@model BookModel;*@
 
 <div class="container">
     <div class="row">
-        <h3 class="Display-4">Book Details</h3>
+        <h3 class="Display-4">Book Details @Model.Name</h3>
         <div class="col-md-6">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -39,20 +39,20 @@
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>@Model.Title</h1>
+                    <h1>@Model.book.Title</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-primary">
                     <span class="label label-primary">By:</span>
-                    <span class="monospaced">@Model.Author</span>
+                    <span class="monospaced">@Model.book.Author</span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
                     <p class="description">
-                        @Model.Descrption
+                        @Model.book.Descrption
                     </p>
                 </div>
 
@@ -69,17 +69,17 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <span class="font-weight:bold;">Category - </span>
-                    @Model.Category
+                    @Model.book.Category
                 </li>
 
                 <li class="list-group-item">
                     <span class="font-weight:bold;">Total Pages - </span>
-                    @Model.TotalPages
+                    @Model.book.TotalPages
                 </li>
 
                 <li class="list-group-item">
                     <span class="font-weight:bold;">Language - </span>
-                    @Model.Language
+                    @Model.book.Language
                 </li>
             </ul>
         </div>
@@ -95,13 +95,13 @@
                 <div class="card mb-4 shadow-sm">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlms=""></svg> 
                         <div class="card-body">
-                            <h3 class="card-text">book.Title</h3>
-                            <p class="card-text"> book.Descrption </p>
+                            <h3 class="card-text">@Model.book.Title</h3>
+                            <p class="card-text"> @Model.book.Descrption </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <a href="~/Book/GetBook/book.Id" class="btn btn-sx btn-outline-secondary">View Details</a>
                                 </div>
-                                <small class="text-muted"> book.Author </small>
+                                <small class="text-muted"> @Model.book.Author </small>
          
                             </div>
                         </div>
