@@ -1,5 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "AllBooka";
+    ViewData["Title"] = "All Books";
+}
+@{
+    var parameters = new Dictionary<string, string>()
+    {
+        {"name","Romi"},
+        {"Company","WTLLP"},
+        {"appName","bookstore"}
+    };
 }
  @*@model IEnumerable<BookModel>*@
 <div class="container">
@@ -16,7 +24,12 @@
                             <p class="card-text"> @book.Descrption </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="~/Book/GetBook/@book.Id" class="btn btn-sx btn-outline-secondary">View Details</a>
+                                    <a asp-controller="book" asp-action="GetBook"
+                                    asp-route-id="@book.Id"
+                                    asp-route-nameOfBook="@book.Title"
+                                   asp-all-route-data="@parameters"
+                                    
+                                    class="btn btn-sx btn-outline-secondary">View Details</a>
                                 </div>
                                 <small class="text-muted"> @book.Author </small>
          

@@ -55,9 +55,12 @@ namespace Webgentle.BookStore
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                //endpoints.MapDefaultControllerRoute();
                 endpoints.MapRazorPages();
-
+                endpoints.MapDefaultControllerRoute();
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "bookApp/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
