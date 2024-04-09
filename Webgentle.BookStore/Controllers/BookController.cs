@@ -18,13 +18,11 @@ namespace Webgentle.BookStore.Controllers
             return View(data);
 
         }
+        [Route("book-details/{id}",Name ="bookDetailsRoute")]
         public ViewResult GetBook(int id)
         {
-            dynamic data =new System.Dynamic.ExpandoObject();
-            data.book= _bookRepository.GetBookById(id);
-            data.Name = "Pragya";
-            //var data=_bookRepository.GetBookById(id);
-            
+            //BookModel data = new BookModel();
+            var data= _bookRepository.GetBookById(id);
             return View(data);
         }
 
