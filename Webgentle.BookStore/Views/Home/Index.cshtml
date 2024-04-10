@@ -1,14 +1,27 @@
-﻿@*@{
+﻿@{
     ViewData["Title"] = "Home";
-}*@
-@{
-    var book = ViewData["Book"] as BookModel;
 }
 <section class="jumbotron text center">
   <div class="container">
-      <h1>Welcome To BookStore @ViewData["CustomProperty"]</h1>
-      <h1>Id=@book.Id</h1>
-      <h1>Title=@book.Title</h1>
+      <h1>Welcome To BookStore</h1>
+@*      <environment names="Development">
+          <h3>Development</h3>
+      </environment>
+            <environment names="Production,Staging">
+          <h3>Production</h3>
+      </environment>*@
+      <environment include="Development">
+          <h3>Development</h3>
+      </environment>
+      
+      <environment exclude="Production,Staging">
+          <h3>Production</h3>
+      </environment>
+
+    <environment include="Production,Staging">
+          <h3>Production</h3>
+      </environment>
+      
   <p class="lead text-muted">
       This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
   It uses utility classes for typography and spacing to space content out within the larger container.
