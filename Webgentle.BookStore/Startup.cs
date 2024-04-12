@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
@@ -10,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Webgentle.BookStore.Data;
 
 namespace Webgentle.BookStore
 {
@@ -25,6 +27,9 @@ namespace Webgentle.BookStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BookStoreContext>(
+                options=>options.UseSqlServer("Server= DESKTOP-FKJPP8L\\SQLEXPRESS; User id=sa; password=info; Database=BookStore;MultipleActiveResultSets=true;"));
+            
             services.AddRazorPages();
             services.AddControllersWithViews();
 #if DEBUG
