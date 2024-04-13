@@ -1,9 +1,22 @@
-﻿@model BookModel;
+﻿@using Webgentle.BookStore.Models
+@model BookModel;
 @{
     ViewData["Title"] = "Add New Book";
 }
 <div class="container">
     <h3 class="display-4">Add New Book</h3>
+    <hr />
+    @if (ViewBag.IsSuccess)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations</strong> You should added new book successfully. <br />
+            Click <a asp-controller="book" asp-action="GetBook" id="@ViewBag.BookId" > here <a>/a>a to view the details
+            @*<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>*@
+        </div>
+    }
+
     <form method="post" asp-action="AddNewBook" asp-controller="book">
 
         <div class="form-group">
@@ -21,9 +34,9 @@
             <textarea asp-for="Descrption" class="form-control"></textarea>
         </div>
 
-                <div class="form-group">
+        <div class="form-group">
             <label asp-for="TotalPages"></label>
-            <input asp-for="TotalPages" class="form-control"/>
+            <input asp-for="TotalPages" class="form-control" />
         </div>
 
         <div class="form-group">
